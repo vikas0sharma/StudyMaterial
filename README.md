@@ -59,6 +59,16 @@ Every Angular app has a root module, conventionally named AppModule, which provi
     - Pure Pipe : Angular executes a pure pipe only when it detects a pure change to the input value. (default)
     - Impure Pipe : Angular executes an impure pipe during every component change detection cycle. An impure pipe is called often, as often as every keystroke or mouse-move.
     - Async Impure Pipe : The AsyncPipe accepts a Promise or Observable as input and subscribes to the input automatically, eventually returning the emitted values.
+    ```javascript
+    import { Pipe, PipeTransform } from '@angular/core';
+    @Pipe({name: 'exponentialStrength'})
+    export class MyCustomPipe implements PipeTransform {
+      transform(value: number, arg: string): number {
+        // do something with number 
+        return number;
+      }
+    }
+    ```
 
 ### Observables:
     - Observables are declarative—that is, you define a function for publishing values, but it is not executed until a consumer subscribes to it. The subscribed consumer then receives notifications until the function completes, or until they unsubscribe.##
