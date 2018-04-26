@@ -61,5 +61,8 @@ Every Angular app has a root module, conventionally named AppModule, which provi
     - Async Impure Pipe : The AsyncPipe accepts a Promise or Observable as input and subscribes to the input automatically, eventually returning the emitted values.
 
 ### Observables:
-    - Observables are declarative—that is, you define a function for publishing values, but it is not executed until a consumer subscribes to it. The subscribed consumer then receives notifications until the function completes, or until they unsubscribe.
+    - Observables are declarative—that is, you define a function for publishing values, but it is not executed until a consumer subscribes to it. The subscribed consumer then receives notifications until the function completes, or until they unsubscribe.##
     
+### Template reference variables ( #var )
+    - A template reference variable is often a reference to a DOM element within a template. It can also be a reference to an Angular component or directive or a web component.
+    - Use the hash symbol (#) to declare a reference variable. The #phone declares a phone variable on an <input> element.
