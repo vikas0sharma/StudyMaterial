@@ -62,7 +62,7 @@ Every Angular app has a root module, conventionally named AppModule, which provi
 
 ```javascript
 import { Pipe, PipeTransform } from '@angular/core';
-@Pipe({name: 'exponentialStrength'})
+@Pipe({name: 'MyCustomPipe'})
 export class MyCustomPipe implements PipeTransform {
   transform(value: number, arg: string): number {
     // do something with number 
