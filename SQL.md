@@ -45,3 +45,9 @@ on e.DepartmentID = d.DepartmentID
 group by d.Name
 order by NoOfEmp desc
 ```
+## Names starts with a character without using LIKE operator
+```sql
+Select d.Name
+from HumanResources.Department d
+where LEFT(d.Name,1)='P'
+```
