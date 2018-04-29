@@ -24,4 +24,15 @@ FROM
 Result
 WHERE Rank = 3;
 ```
+## Delete duplicate records
+```sql
+WITH cte as
+(
+	SELECT *, ROW_NUMBER() Over ( Partition by ID Order By ID ) as 'Rownumber'
+	FROM
+	Employees
+)
+DELETE From cte
+WHERE Rownumber > 1;
 
+```
