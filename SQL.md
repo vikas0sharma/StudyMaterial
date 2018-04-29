@@ -36,3 +36,12 @@ DELETE From cte
 WHERE Rownumber > 1;
 
 ```
+## Number of employees in each department
+```sql
+Select Count(e.BusinessEntityID) 'NoOfEmp', d.Name
+From HumanResources.EmployeeDepartmentHistory e 
+Join HumanResources.Department d
+on e.DepartmentID = d.DepartmentID
+group by d.Name
+order by NoOfEmp desc
+```
